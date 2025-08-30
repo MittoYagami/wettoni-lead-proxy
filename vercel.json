@@ -1,0 +1,5 @@
+{
+  "routes": [
+    { "src": "/api/wettoni-lead", "dest": "/api/wettoni-lead.js" }
+  ]
+}
