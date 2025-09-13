@@ -1,7 +1,7 @@
 // api/wettoni-lead.js
 export const config = { runtime: 'edge' };
 
-const ORIGIN = 'https://wettoni.framer.website'; // tvoje Framer doména
+const ORIGIN = 'https://wettoni.com'; // tvoje Framer doména
 const cors = {
   'Access-Control-Allow-Origin': ORIGIN,           // můžeš dát '*' během testu
   'Access-Control-Allow-Methods': 'POST,OPTIONS',
@@ -35,7 +35,7 @@ export default async function handler(req) {
     }
 
     // 3) přidej _next pro server-side redirect z Formspree (bez jejich UI)
-    const NEXT_URL = 'https://wettoni.framer.website/thank-you-page';
+    const NEXT_URL = 'https://wettoni.com/thank-you-page';
     if (!fields.get('_next')) fields.set('_next', NEXT_URL);
 
     const FORMSPREE_ID = process.env.FORMSPREE_ID;
